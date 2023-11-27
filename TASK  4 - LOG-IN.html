@@ -1,0 +1,74 @@
+<html>
+    <style>
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Poppins", sans-serif;
+        }  
+        body {background:linear-gradient(-45deg,rgb(36, 229, 232),white,rgb(242, 173, 184));}
+        h2 {font-size: medium;
+            color: rgb(245, 119, 140);}
+        button {
+          text-align: center;
+            border: whitesmoke;
+            color: black;
+            cursor: pointer;
+            font-size: 13px;
+            padding: 7px 13px;
+            border-radius: 4px;
+            letter-spacing: 0.3px;
+            background: rgb(249, 153, 178);
+        }
+        fieldset{width: 400;
+                 height: 200 ;
+                 background: #fff;
+                 margin: 137px auto;
+                 border-radius: 7px;
+                 padding: 28px 0 30px;
+                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);}
+        p{color: rgb(239, 86, 137);}
+        a{color: white;}
+.task-input {
+  position: relative;
+  height: 52px;
+  padding: 0 25px;
+}
+
+.task-input ion-icon {
+  position: absolute;
+  top: 50%;
+  color: #999;
+  font-size: 25px;
+  transform: translate(17px, -50%);
+}
+
+.task-input input {
+  height: 50%;
+  width: 90%;
+  outline: none;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 0 20px 0 53px;
+  border: 1px solid #999;
+}
+
+    </style>
+    <body>
+      <div>
+       <fieldset>
+       <h2 style="text-align: center;">LOG IN</h2> <br>
+       <div class="task-input">
+        <ion-icon name="create-outline"></ion-icon>
+        <h2> User ID: </h2><input type="text" placeholder="Email or Phone NO.">
+        <br><br>
+        <h2> Password: </h2><input type="text" placeholder="EX: Name@1234">
+      </div>
+       </fieldset>
+       <div style="text-align: center;">
+       <button type="submit"> Log In </a></button>
+       <button type="submit"> Sign UP </a></button>
+       </div>
+      </div>
+    </body>
+</html> 
