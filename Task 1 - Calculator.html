@@ -1,0 +1,110 @@
+<html>
+<head>
+  <title>Basic Calculator using HTML, CSS and JavaScript</title>
+</head>
+ 
+<body>
+<table class="calculator" >
+  <tr>
+    <td colspan="3"> <input class="display-box" type="text" id="result" disabled> </td>
+    <td> <input type="button" value="C" onclick="clearScreen()" id="refresh"> </td>
+  </tr>
+  <tr>
+    <td> <input type="button" value="+" onclick="display('+')" id="math"> </td>
+    <td> <input type="button" value="-" onclick="display('-')" id="math"> </td>
+    <td> <input type="button" value="*" onclick="display('*')" id="math"> </td>
+    <td> <input type="button" value="/" onclick="display('/')" id="math"> </td>
+  </tr>
+  <tr>
+    <td> <input type="button" value="1" onclick="display('1')" id="num"> </td>
+    <td> <input type="button" value="2" onclick="display('2')" id="num"> </td>
+    <td> <input type="button" value="3" onclick="display('3')" id="num"> </td>
+    <td> <input type="button" value="4" onclick="display('4')" id="num"> </td>
+  </tr>
+  <tr>
+    <td> <input type="button" value="5" onclick="display('5')" id="num"> </td>
+    <td> <input type="button" value="6" onclick="display('6')" id="num"> </td>
+    <td> <input type="button" value="7" onclick="display('7')" id="num"> </td>
+    <td> <input type="button" value="8" onclick="display('8')" id="num"> </td>
+  </tr>
+  <tr>
+    <td> <input type="button" value="9" onclick="display('9')" id="num"> </td>
+    <td> <input type="button" value="." onclick="display('.')" id="num"> </td>
+    <td> <input type="button" value="O" onclick="display('O')" id="num"> </td>
+    <td> <input type="button" value="=" onclick="calculate()" id="equals"> </td>
+  </tr>
+</table>
+
+<style>
+  .calculator {
+    padding: 15px;
+    border-radius: 1em;
+    height: 380px;
+    width: 400px;
+    margin: auto;
+    background-color: #040b3d;
+}
+#result{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20;
+    background-color: #dcdbe1;
+    border: solid black 0.5px;
+    color: black;
+    border-radius: 5px;
+    width: 95%;
+    height: 70%;
+}
+
+#refresh{
+    background-color: #fb5c00;
+    width: 75;
+    height: 50;
+}
+
+#equals{
+    background-color: #fb5c00;
+    width: 75;
+    height: 50;
+}
+
+#num{
+    background-color: #bdb9b9;
+    color: #191b28;
+    width: 75;
+    height: 50;
+}
+
+#math{
+    width: 75;
+    height: 50;
+}
+
+input[type=button] {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30;
+    background-color: rgb(92, 97, 94);
+    color: rgb(244, 237, 237);
+    border: solid black 0.5px;
+    width: 100%;
+    border-radius: 5px;
+    height: 70%;
+    outline: none;
+}
+</style>
+ 
+<script>
+  function clearScreen() {
+    document.getElementById("result").value =" ";
+}
+function display(value) {
+    document.getElementById("result").value += value;
+}
+function calculate() {
+    var p = document.getElementById("result").value;
+    var q = eval(p);
+    document.getElementById("result").value = q;
+}
+</script>
+ 
+</body>
+</html>
